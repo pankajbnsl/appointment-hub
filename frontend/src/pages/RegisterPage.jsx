@@ -20,6 +20,7 @@ const RegisterPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
+
     try {
       await api.post('/auth/register', form);
       navigate('/');
@@ -39,16 +40,17 @@ const RegisterPage = () => {
         {error && <p className="error">{error}</p>}
 
         <form onSubmit={handleSubmit} className="register-form">
-          <input name="name" placeholder="Full Name" value={form.name} onChange={handleChange} required />
+          <input name="name" placeholder="Full Name" value={form.name} onChange={handleChange} minLength={3}
+           required />
           <input name="email" type="email" placeholder="Email" value={form.email} onChange={handleChange} required />
-          <input name="password" type="password" placeholder="Password" value={form.password} onChange={handleChange} required />
+          <input name="password" type="password" placeholder="Password" value={form.password} minLength={8} onChange={handleChange} required />
           
           <select name="role" value={form.role} onChange={handleChange}>
             <option value="client">Client</option>
             <option value="provider">Provider</option>
           </select>
 
-          <button type="submit">Register</button>
+          <button type="submit" >Register</button>
         </form>
 
         <p className="signup-text">
