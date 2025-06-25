@@ -1,0 +1,622 @@
+/* ---------------- GLOBAL STYLES ---------------- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fa;
+}
+
+/* ---------------- LOGIN PAGE CSS ---------------- */
+.login-container {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f8fb;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.login-form-section {
+  flex: 1;
+  max-width: 450px;
+  background-color: #ffffff;
+  padding: 3rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.login-form-section h2 {
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form input {
+  padding: 0.85rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.login-form button {
+  background-color: #20c997;
+  color: white;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #17b08a;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.form-options label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.forgot-link {
+  color: #20c997;
+  text-decoration: none;
+}
+
+.signup-text {
+  margin-top: 1.2rem;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.signup-text a {
+  color: #20c997;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.error {
+  color: red;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* ---------------- ILLUSTRATION IMAGE ---------------- */
+.login-image-section {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-image-section img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ---------------- RESPONSIVE STYLES ---------------- */
+@media (max-width: 1024px) {
+  .login-container {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .login-form-section {
+    width: 80%;
+    max-width: 500px;
+  }
+
+  .login-image-section {
+    order: -1;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .login-image-section img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-form-section {
+    padding: 2rem 1.5rem;
+    width: 80%;
+  }
+
+  .form-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .login-image-section img {
+    max-width: 80%;
+  }
+}
+
+
+/* .......REGISTER PAGE CSS............. */
+
+.register-container {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f8fb;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.register-image-section {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-image-section img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.register-form-section {
+  flex: 1;
+  max-width: 450px;
+  background-color: #ffffff;
+  padding: 3rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.register-form-section h2 {
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form input,
+.register-form select {
+  padding: 0.85rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.register-form button {
+  background-color: #20c997;
+  color: white;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-form button:hover {
+  background-color: #17b08a;
+}
+
+.signup-text {
+  margin-top: 1.2rem;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.signup-text a {
+  color: #20c997;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.error {
+  color: red;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 1024px) {
+  .register-container {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .register-form-section {
+    width: 80%;
+    max-width: 500px;
+  }
+
+  .register-image-section {
+    order: -1;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .register-image-section img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-form-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .register-image-section img {
+    max-width: 80%;
+  }
+}
+
+/* ---------------- DASHBOARD PAGE CSS ---------------- */
+
+.dashboard-container {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 1.2rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.dashboard-header h2 {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.dashboard-header h2 span {
+  color: #20c997;
+}
+
+.dashboard-header h2 small {
+  color: #555;
+  font-weight: normal;
+  margin-left: 8px;
+}
+
+.logout-btn {
+  background-color: #20c997;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.logout-btn:hover {
+  background-color: #e64949;
+}
+
+.dashboard-content {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .logout-btn {
+    width: 100%;
+  }
+}
+
+/* ---------------- ADMIN PANEL CSS ---------------- */
+
+.admin-panel {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.admin-title {
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  color: #1a1a1a;
+}
+
+.booking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.booking-card {
+  background-color: #fefefe;
+  border: 1px solid #e0e0e0;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.booking-date {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.4rem;
+}
+
+.booking-info {
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.client {
+  color: #1a73e8;
+  font-weight: 500;
+}
+
+.provider {
+  color: #20c997;
+  font-weight: 500;
+}
+
+.arrow {
+  color: #999;
+  font-size: 1.1rem;
+}
+
+
+/* ---------------- CLIENT PANEL CSS ---------------- */
+
+.client-panel {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.client-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.client-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.client-controls select,
+.client-controls button {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.client-controls button {
+  background-color: #20c997;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.client-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.availability-section {
+  margin-bottom: 1.5rem;
+}
+
+.slot-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.slot-item {
+  background-color: #e6f7f2;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.slot-item button {
+  background-color: #20c997;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.message {
+  color: green;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+/* Bookings */
+.booking-section {
+  margin-top: 2rem;
+}
+
+.booking-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.booking-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.booking-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.no-booking {
+  color: #888;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .client-controls {
+    flex-direction: column;
+  }
+
+  .slot-list {
+    flex-direction: column;
+  }
+}
+
+/* ---------------- PROVIDER PANEL CSS ---------------- */
+
+.provider-panel {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 1.5rem 0;
+}
+
+.provider-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.provider-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.provider-form input,
+.provider-form button {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.provider-form input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.provider-form button {
+  background-color: #20c997;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.provider-form button:hover {
+  background-color: #17b08a;
+}
+
+.message {
+  color: green;
+  margin-top: 0.8rem;
+  font-weight: 500;
+}
+
+/* Bookings */
+.booking-section {
+  margin-top: 2rem;
+}
+
+.booking-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.booking-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.booking-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.no-booking {
+  color: #888;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .provider-form {
+    flex-direction: column;
+  }
+
+  .provider-form input,
+  .provider-form button {
+    width: 100%;
+  }
+}
+
+
+
+
+
