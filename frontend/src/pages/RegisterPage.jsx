@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import api from '../api/axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 const RegisterPage = () => {
@@ -52,7 +52,7 @@ const RegisterPage = () => {
         </form>
 
         <p className="signup-text">
-          Already have an account? <a href="/">Login</a>
+          Already have an account? <Link to="/">Login</Link>
         </p>
       </div>
     </div>

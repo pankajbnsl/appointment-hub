@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { Link } from 'react-router-dom';
 import api from '../api/axios';
 
 const LoginPage = () => {
@@ -43,7 +44,7 @@ const LoginPage = () => {
         </form>
 
         <p className="signup-text">
-          Not Registered Yet? <a href="/register">Sign-Up</a>
+          Not Registered Yet? <Link to="/register">Sign-Up</Link>
         </p>
       </div>
 
